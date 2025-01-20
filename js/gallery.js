@@ -62,16 +62,13 @@ function onImageClick(e) {
 
     const link = e.target.closest('a');
 
-    if (link) {
-        console.log(`Click on ${link.getAttribute('href')}`);
-    }
-
-    if (link.nodeName !== 'A') {
+    if (!link) {
         return;
     }
 
-    const modalHTML = `<img src="${link}" alt="Large image" />`;
+    console.log(`Click on ${link.getAttribute('href')}`);
 
+    const modalHTML = `<img src="${link}" alt="Large image" />`;
     const instance = basicLightbox.create(modalHTML);
 
     instance.show();
