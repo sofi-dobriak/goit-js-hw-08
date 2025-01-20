@@ -55,7 +55,6 @@ const markup = imagesTemplate(images);
 gallery.insertAdjacentHTML('afterbegin', markup);
 
 // Додаю логіку
-const galleryLinks = document.querySelectorAll('.gallery-link');
 gallery.addEventListener('click', onImageClick);
 
 function onImageClick(e) {
