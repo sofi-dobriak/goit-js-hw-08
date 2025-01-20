@@ -1,2 +1,1 @@
-The third homework of the JavaScript module of the FullStack Developer course + solutions for
-additional tasks from the teacher
+The eighth homework of the JavaScript module of the FullStack Developer course
