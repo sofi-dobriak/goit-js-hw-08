@@ -61,7 +61,7 @@ function onImageClick(e) {
     e.preventDefault();
 
     const linkLargestImages = e.target.closest('a');
-    if (!linkLargestImages) return;
+    if (e.target.nodeName !== 'IMG') return;
 
     console.log(`Click on ${linkLargestImages.href}`);
 
