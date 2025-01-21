@@ -60,15 +60,12 @@ gallery.addEventListener('click', onImageClick);
 function onImageClick(e) {
     e.preventDefault();
 
-    const link = e.target.closest('a');
+    const linkLargestImages = e.target.closest('a');
+    if (!linkLargestImages) return;
 
-    if (!link) {
-        return;
-    }
+    console.log(`Click on ${linkLargestImages.href}`);
 
-    console.log(`Click on ${link.getAttribute('href')}`);
-
-    const modalHTML = `<img src="${link}" alt="Large image" />`;
+    const modalHTML = `<img src="${linkLargestImages.href}" alt="Large image" />`;
     const instance = basicLightbox.create(modalHTML);
 
     instance.show();
